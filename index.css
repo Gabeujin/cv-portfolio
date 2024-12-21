@@ -1,0 +1,313 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    background-color: #f9f9fb;
+    color: #333;
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* Container */
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+}
+
+#access-key{
+    padding: 5px 10px;
+    line-height: 20px;
+}
+
+/* Project Cards */
+.project {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px 25px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.project:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.chart-container{
+    height: 15vh;
+    width: 100%;
+}
+
+/* Headings */
+h1 {
+    color: #2a2a2a;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+h2 {
+    color: #444;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    border-left: 5px solid #635994;
+    padding-left: 10px;
+}
+.section-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.item {
+    padding: 0.3rem 0rem;
+}
+
+.section {
+    margin: 0.9rem 0rem;
+}
+
+/* 프로젝트 제목 */
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    padding-bottom: 5px;
+}
+
+/* 라벨 스타일 (소제목) */
+.label {
+    font-weight: bold;
+    color: #555;
+    display: inline-block;
+    width: 120px;
+    margin-right: 5px;
+}
+
+/* 작업 섹션 제목 */
+.task-section h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* 리스트 스타일 */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.task-list li:hover {
+    background-color: #e3f2ff;
+}
+
+.task-title {
+    font-weight: bold;
+    color: #007bff;
+    min-width: 110px;
+    margin-right: 10px;
+}
+
+.task-content {
+    color: #333;
+    line-height: 1.6;
+    word-break: keep-all;
+    white-space: normal;
+}
+
+.project>p, .project>div.task-section{
+    padding: 0.3rem 0rem;
+}
+
+/* 전체 텍스트 */
+.project-summary p {
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 6% auto;
+    padding: 25px;
+    width: 85%;
+    /*max-width: 900px;*/
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.close-btn:hover {
+    color: #333;
+}
+
+/* Mermaid Container */
+.svg-container {
+    width: 100%;
+    height: 520px;
+    min-height: 50vh;
+    overflow: auto; /* 스크롤 활성화 */
+    /*overflow: hidden;*/
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Highlight */
+.highlight {
+    background: #ffe8a1;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+/* 공통 버튼 스타일 */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* 아이콘 정렬 */
+    position: relative;
+    font-size: 0.875rem;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    overflow: hidden; /* 텍스트가 버튼 크기를 넘어가지 않도록 */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* 개별 버튼 스타일 */
+.btn-diagram {
+    color: #ffffff;
+    background-color: #ffffff;
+    border: none;
+    width: 100px; /* 버튼 너비 고정 */
+    height: 36px; /* 버튼 높이 고정 */
+}
+
+.btn-diagram:hover {
+    background-color: #0056b3;
+}
+
+.btn-link {
+    color: #0056b3;
+    background-color: #ffffff;
+    width: 180px; /* 버튼 너비 고정 */
+    height: 40px; /* 버튼 높이 고정 */
+}
+
+.btn-link:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+    border-color: #0056b3;
+}
+
+/* 공통 아이콘 스타일 */
+.btn .icon {
+    font-weight:bolder;
+    position: absolute; /* 절대 위치 */
+    left: 10px; /* 아이콘 위치 */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 공통 텍스트 스타일 */
+.btn .text {
+    opacity: 0; /* 기본 상태에서 텍스트 숨김 */
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    overflow: hidden; /* 불필요한 텍스트 숨김 */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-10px); /* 텍스트를 숨김 상태로 이동 */
+}
+
+/* 공통 호버 상태 */
+.btn:hover .text {
+    opacity: 1; /* 텍스트 표시 */
+    transform: translateX(0); /* 텍스트를 원래 위치로 이동 */
+}
+
+.btn:hover .icon {
+    transform: translateX(-50px); /* 아이콘 이동하여 사라지는 효과 */
+    opacity: 0; /* 아이콘 숨김 */
+}
+
+.controls {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 90px;
+}
+
+.controls button {
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.4;
+    user-select: none;
+}
+
+.controls button:hover {
+    opacity: 1;
+}

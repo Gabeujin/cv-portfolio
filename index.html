@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경력기술서</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.2.4/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml/dist/js-yaml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <div id="enterkey" class="container">
+        <h1>Enter</h1>
+        <div>
+            <input type="password" id="access-key" placeholder="비밀번호를 입력하세요">
+            <button class="btn" type="button" id="togglePassword">보이기</button>
+        </div>
+        <br/>
+        <button id="go-cv-page" type="button" class="btn">Submit</button>
+    </div>
+    <pre id="main">
+    </pre>
+</body>
+<script src="loadProject.js"></script>
+</html>
