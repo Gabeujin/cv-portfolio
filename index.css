@@ -70,6 +70,7 @@ h2 {
 
 .item {
     padding: 0.3rem 0rem;
+    word-break: keep-all;
 }
 
 .section {
@@ -104,7 +105,7 @@ h2 {
 }
 
 /* 리스트 스타일 */
-.task-list {
+.task-list, .p-list{
     list-style: none;
     padding: 0;
     margin: 0;
@@ -117,6 +118,16 @@ h2 {
     background-color: #f6f6f6;
     border-radius: 5px;
     padding: 5px;
+}
+
+.p-list li{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+li .shrink{
+    flex-shrink: 50;
 }
 
 .task-list li:hover {
